@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
+""" The module for finding the sum of a list items """
 from typing import List
+
 
 
 def sum_list(input_list: List[float]) -> float:

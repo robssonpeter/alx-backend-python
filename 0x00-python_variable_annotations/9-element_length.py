@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+""" Finding the element Length by duck typing """
 from typing import Iterable, Sequence, List, Tuple
 
 
