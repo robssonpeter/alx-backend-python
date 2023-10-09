@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
+""" Async Coroutine for random delay """
 import asyncio
 import random
-""" Async Coroutine for random delay """
 
 
 async def wait_random(max_delay: int = 10) -> float:
