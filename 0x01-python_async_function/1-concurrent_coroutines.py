@@ -6,7 +6,7 @@ import asyncio
 wait_random: function = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> List:
+async def wait_n(n: int, max_delay: int) -> List[float]:
     """ Run n numbers of coroutines of the random function """
 
     if (max_delay == 0):
