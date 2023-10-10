@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """ Async generator import module """
-import asyncio
 from typing import List
 
 
