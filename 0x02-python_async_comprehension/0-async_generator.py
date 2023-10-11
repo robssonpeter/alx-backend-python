@@ -2,10 +2,10 @@
 """ The module for random number returning """
 import asyncio
 import random
-from typing import AsyncGenerator
+from typing import Generator
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
+async def async_generator() -> Generator[float, None, None]:
     """ The function async generator """
 
     for i in range(10):
