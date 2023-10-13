@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """ Concurent Running of Multiple coroutines """
-from typing import List
+from typing import List, Union
 import asyncio
 
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> List[float, None]:
+async def wait_n(n: int, max_delay: int) -> Union[List[float], None]:
     """ Run n numbers of coroutines of the random function """
 
     if (max_delay == 0):
