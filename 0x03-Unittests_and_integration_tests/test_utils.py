@@ -3,6 +3,7 @@ import unittest
 from utils import access_nested_map
 from utils import requests
 from utils import get_json
+from utils import memoize
 from parameterized import parameterized
 from unittest.mock import MagicMock, patch
 from typing import Mapping
@@ -46,3 +47,20 @@ class TestGetJson(unittest.TestCase):
         mock = get_json(input)
         mock.__call__(url=input)
         mock.assert_called_once_with(url=input)
+
+class TestMemoize(unittest.TestCase):
+    def test_memoize(self):
+        class TestClass:
+            def a_method(self):
+                return 42
+
+            @memoize
+            def a_property(self):
+                return self.a_method()
+        mock = MagicMock(spec=TestClass)
+        mock.__call__()
+        mock.a_method()
+        mock.a_method()
+        mock.assert_called_once()
+        """ patch('TestClass', test)
+        test.a_method """
