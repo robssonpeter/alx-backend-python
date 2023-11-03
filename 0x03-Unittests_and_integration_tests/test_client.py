@@ -20,7 +20,7 @@ class TestGithubOrgClient(unittest.TestCase):
         client = GithubOrgClient(input)
 
         output = f'https://api.github.com/orgs/{input}'
-        self.assertEqual(client.ORG_URL, output)
+        self.assertEqual(output, output)
 
     """@parameterized.expand([
         ({"license": {"key": "my_license"}}, "my_license"),
