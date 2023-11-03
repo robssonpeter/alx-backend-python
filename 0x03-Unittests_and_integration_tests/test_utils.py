@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" The testing class for the module utils """
+""" The testing class for the module utils and other stuffs """
 import unittest
 from utils import access_nested_map
 from utils import requests
@@ -11,7 +11,7 @@ from typing import Mapping
 
 
 class TestAccessNestedMap(unittest.TestCase):
-    """ The class itself for testing utils """
+    """ The class itself for testing utils and other stuffs """
 
     @parameterized.expand([
         ([{"a": 1}, ("a",)], 1),
