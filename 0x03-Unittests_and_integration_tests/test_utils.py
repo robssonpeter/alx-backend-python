@@ -19,11 +19,13 @@ class TestAccessNestedMap(unittest.TestCase):
         ([{"a": {"b": 2}}, ("a", "b")], 2)
     ])
     def test_access_nested_map(self, input, expected):
+        """ The function to teste the nested access map function """
         output = access_nested_map(input[0], input[1])
         return self.assertEqual(output, expected)
 
 
 class TestGetJson(unittest.TestCase):
+    """ The class for testing the get json functoin in the utils """
     @parameterized.expand([
         ('http://example.com', {"payload": True}),
         ('http://holberton.io', {"payload": False}),
@@ -37,8 +39,11 @@ class TestGetJson(unittest.TestCase):
 
 
 class TestMemoize(unittest.TestCase):
+    """ The class for testing Memoization """
     def test_memoize(self):
+        """ The function that will test teh memoize function"""
         class TestClass:
+            """ The test class created to to test the a_method """
             def a_method(self):
                 return 42
 
